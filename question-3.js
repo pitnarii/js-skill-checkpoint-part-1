@@ -8,14 +8,11 @@ pwd >= 6 && pwd <= 10 --> "Medium"
 pwd > 10 --> "Strong"
 if-else, count string, loop, check
 */
-userPassword ="passwordIsStrong"
+userPassword = "passwordIsStrong"
 console.log(userPassword.length)
 function checkPasswordStrength(userPassword) {
     let count = userPassword.length
-    let result = ""
-    for(i=0; i < userPassword.length; i++) {
-        console.log(userPassword[i])
-    }
+    let result;
     if (count < 6) {
         result = "Weak";
     } else if (count >= 6 && count <= 10) {
