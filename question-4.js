@@ -15,9 +15,10 @@ let count =0
 for (let items of inventory) {
   console.log(items.quantity);
   if (count.quantity < items.quantity) {
-    count += count.quantity;
-    console.log(count)
-  } return `สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ ${inventory.name} ซึ่งมี ${inventory.quantity} ชิ้น`
+    count = count.quantity
+  } 
 }
+console.log(count);
+// console.log(`สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ ${inventory.name} ซึ่งมี ${inventory.quantity} ชิ้น`)
 
 
