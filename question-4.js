@@ -6,19 +6,19 @@ const inventory = [
 ];
 // เริ่มเขียนโค้ดตรงนี้
 /*
--find lowest quantity in inventory
+-find the lowest quantity in inventory
 -console.log(สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ Banana ซึ่งมี 50 ชิ้น)
 or if inventory quantities has changed then the result will change according to quantities numbers
 */
 console.log(inventory[0].quantity);
-let count =0
+let count = inventory[0]
 for (let items of inventory) {
   console.log(items.quantity);
-  if (count.quantity < items.quantity) {
-    count = count.quantity
+  if (count.quantity > items.quantity) {
+    count = items
   } 
 }
 console.log(count);
-// console.log(`สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ ${inventory.name} ซึ่งมี ${inventory.quantity} ชิ้น`)
+console.log(`สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ ${count.name} ซึ่งมี ${count.quantity} ชิ้น`)
 
 

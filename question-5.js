@@ -33,17 +33,18 @@ function calculateTotalPrice(products, promotionCode) {
   let calculatePrice;
   for (let item of products) {
     totalPrice += item.price * item.quantity;
-    if (promotionCode === "SALE20") {
-      calculatePrice = totalPrice*0.8;
-    } else if (promotionCode === "SALE50") {
-      calculatePrice = totalPrice*0.5; 
-    } else {
-      calculatePrice = totalPrice;
-    }
-   
-  } return calculatePrice
+  }
+  if (promotionCode === "SALE20") {
+    calculatePrice = totalPrice * 0.8;
+  } else if (promotionCode === "SALE50") {
+    calculatePrice = totalPrice * 0.5;
+  } else {
+    calculatePrice = totalPrice;
+  }
+
+  return calculatePrice
 }
 
-console.log(calculateTotalPrice(products,"SALE20"))
-console.log(calculateTotalPrice(products,"SALE50"))
-console.log(calculateTotalPrice(products,""))
+console.log(calculateTotalPrice(products, "SALE20"))
+console.log(calculateTotalPrice(products, "SALE50"))
+console.log(calculateTotalPrice(products, ""))

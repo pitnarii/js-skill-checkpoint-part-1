@@ -15,7 +15,7 @@ bring last obj and change to "To-do id: <ค่าของ id>, <ค่าข�
 function editTodo(myTodo) {
   myTodo.push({id: 5, todo: "Walk the dog"});
   myTodo[3].todo = "Go to the gym";
-  delete myTodo[4]
+  myTodo.pop[4]
   return `To-do id: ${myTodo[3].id}, ${myTodo[3].todo}`
 }
 console.log(editTodo(myTodo))
