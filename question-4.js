@@ -15,6 +15,8 @@ let count = inventory[0]
 for (let items of inventory) {
   console.log(items.quantity);
   if (count.quantity > items.quantity) {
+    // ถ้าหาค่าน้อยที่สุดให้ใส่ > ถ้าหาค่ามาดสุดให้ใส่ <
+    // เพราะเทียบเป็นลำดับตาม index
     count = items
   } 
 }
